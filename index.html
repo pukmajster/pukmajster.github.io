@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Žan Pukmajster</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="./scripts/project-card.js"></script>
+  </head>
+
+  <body>
+    <div id="BackgroundContainer">
+      <div id="BackgroundInner">
+        <img src="./assets/bg.jpg" id="BlurredBg" alt="" />
+        <div id="BlurredBgOverlay"></div>
+      </div>
+    </div>
+
+    <section id="Header">
+      <div id="HeaderText">
+        <h1 id="HeaderName">Žan Pukmajster</h1>
+        <h4 id="HeaderTagline">Frontend web developer</h4>
+
+        <div id="HeaderLinks">
+          <a href="https://github.com/pukmajster" target="_blank">
+            <p-icon-github></p-icon-github>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/zan-pukmajster-7052091b8/"
+            target="_blank"
+          >
+            <p-icon-linkedin></p-icon-linkedin>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="Bio" class="TextPadding">
+        <h2>About Me</h2>
+        <p>
+          Self-taught developer at heart, I started exploring programming at a
+          young age and have been going at it ever since.
+        </p>
+
+        <p>Currently employed at eAsistent as a frontend lead developer.</p>
+      </section>
+
+      <section id="Projects">
+        <div style="margin-top: 2em">
+          <h2 class="TextPadding">Project showcase</h2>
+        </div>
+
+        <p-project-card
+          title="The Smartestway"
+          timeframe="2022 - present"
+          about="The Smartestway is an education platform for learning and sharing study material."
+          details="As the frontend lead, I set standards &
+            guidelines, write core systems & features, maintain our custom UI
+            library, and developer various debugging tools."
+          stack="Next.js, React, TypeScript, Tailwind"
+          app-url="https://app.thesmartestway.com/"
+          landing-page-url="https://thesmartestway.com/"
+        ></p-project-card>
+
+        <p-project-card
+          title="Funky"
+          timeframe="2023 - present"
+          about="Funky is a web-based desktop app for managing addons in Valve's
+            online video game Left 4 Dead 2."
+          details="Being frustrated with the in-game addon manager, I went ahead and
+            created an intuitive tool with user-convenience at the focus. Funky has over 2500 downloads and is a project I'm very proud of."
+          stack="Electron, Svelte, TypeScript, DexieDB, Skeleton UI, Tailwind"
+          landing-page-url="https://pukmajster.github.io/funky/"
+          github-url="https://github.com/pukmajster/funky"
+        ></p-project-card>
+
+        <p-project-card
+          title="Mestna zakladnica"
+          timeframe="2021 - 2022"
+          about="Mobile app that encourages users to explore the region of Saleška
+            dolina by letting users collect digital 'coins' once they arrive at
+            the specified points of interest."
+          details="Alongside the Flutter mobile app, I also developed an admin dashboard that allowed admins to manage locations (categories, images, ...) through Firebase."
+          stack="Flutter, Dart, Firebase, React, Material UI"
+          landing-page-url="https://www.visitsaleska.si/sl/dozivetja/otrosko/mestna-zakladnica/"
+        ></p-project-card>
+
+        <a id="AllProjectsLink" class="Button" href="/projects.html">
+          View all projects
+        </a>
+      </section>
+
+      <footer>
+        <!-- <p>© 2026 Žan Pukmajster</p> -->
+      </footer>
+
+      <section id="Devroom" style="display: none">
+        <h1>H1 heading</h1>
+        <h2>H2 heading</h2>
+        <h3>H3 heading</h3>
+        <h4>H4 heading</h4>
+        <h5>H5 heading</h5>
+        <p>Paragraph</p>
+      </section>
+    </main>
+  </body>
+</html>
