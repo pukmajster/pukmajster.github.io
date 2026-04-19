@@ -10,6 +10,9 @@ class CProjectCard extends HTMLElement {
     const about = this.getAttribute("about");
     const details = this.getAttribute("details");
     const stack = this.getAttribute("stack");
+    const img = this.getAttribute("img");
+
+    const fullImgUrl = img ? `/assets/projects/${img}` : null;
 
     this.innerHTML = `
        <article class="ProjectCard">
@@ -18,16 +21,26 @@ class CProjectCard extends HTMLElement {
             ${timeframe ? `<span class="ProjectCardTimeframe">${timeframe}</span>` : ""}
           </div>
 
-          <p>${about}</p>
+          <div class="ProjectCardContent">
+            <div>
+              <p>${about}</p>
 
-          ${details ? `<p>${details}</p>` : ""}
+              ${details ? `<p>${details}</p>` : ""}
 
-          <p class="ProjectCardStack">${stack}</p>
+              <p class="ProjectCardStack">${stack}</p>
 
-          <div class="ProjectCardLinks">
-                   ${appUrl ? `<a class="Link" target="_blank" href="${appUrl}">App</a>` : ""}
-            ${landingPageUrl ? `<a class="Link" target="_blank" href="${landingPageUrl}">Landing page</a>` : ""}
-            ${githubUrl ? `<a class="Link" target="_blank" href="${githubUrl}">GitHub</a>` : ""}
+              <div class="ProjectCardLinks">
+                ${appUrl ? `<a class="Link" target="_blank" href="${appUrl}">App</a>` : ""}
+                ${landingPageUrl ? `<a class="Link" target="_blank" href="${landingPageUrl}">Landing page</a>` : ""}
+                ${githubUrl ? `<a class="Link" target="_blank" href="${githubUrl}">GitHub</a>` : ""}
+              </div>
+            </div>
+
+            ${fullImgUrl ? `
+              <a href="${fullImgUrl}" >
+                <img class="ProjectCardImg" src="${fullImgUrl}" alt="" class="ProjectCardBg" />  
+              </a>
+            ` : ""}
           </div>
         </article>
     `;
