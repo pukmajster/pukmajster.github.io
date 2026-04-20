@@ -317,7 +317,7 @@ footer {
 
   .ProjectCardContent {
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr 360px;
     gap: 1rem;
 
     @media (max-width: 1220px) {
