@@ -202,6 +202,18 @@ p {
   }
 }
 
+@media (max-width: 620px) {
+
+  #Header #HeaderName {
+    font-size: 2.4rem;
+  }
+
+  #Header #HeaderText #HeaderLinks {
+    top: unset;
+    bottom: 5.5rem;
+  }
+}
+
 #AllProjectsLink {
   display: block;
   margin: 2em auto;
