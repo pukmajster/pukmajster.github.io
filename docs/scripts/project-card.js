@@ -122,8 +122,25 @@ class CHomeButton extends HTMLElement {
   }
 }
 
+class CSkillsRow extends HTMLElement {
+  constructor() {
+    super();
+
+    const category = this.getAttribute("category");
+    const skills = this.getAttribute("skills");
+
+    this.innerHTML = `
+      <div class="SkillsRow">
+        <p class="SkillsRowCategory">${category}</p>
+        <p class="SkillsRowSkills">${skills}</p>
+      </div>
+    `;
+  }
+}
+
 customElements.define("p-project-card", CProjectCard);
 customElements.define("p-project-category", CProjectCatergory);
 customElements.define("p-icon-linkedin", CIconLinkedIn);
 customElements.define("p-icon-github", CIconGitHub);
 customElements.define("p-home-button", CHomeButton);
+customElements.define("p-skills-row", CSkillsRow);

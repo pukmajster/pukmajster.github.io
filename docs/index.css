@@ -383,7 +383,39 @@ footer {
       max-width: min(100%, 600px);
     }
   }
+}
 
+
+section#Skills {
+  margin-top: 3rem;
+  color: white;
+}
+
+.SkillsRow {
+  display: flex;
+  margin-top: 0.2rem;
+  gap: 0px;
+
+  .SkillsRowCategory {
+    font-weight: 600;
+    margin-right: 1em;
+    width: 100px
+  }
+
+  .SkillsRowSkills {
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 1220px) {
+  .SkillsRow {
+    flex-direction: column;
+    margin-top: 1rem;
+
+    .SkillsRowCategory {
+      line-height: 0px;
+    }
+  }
 }
 
 a {
